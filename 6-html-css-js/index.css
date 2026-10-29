@@ -158,7 +158,18 @@ button:focus-visible {
 @media (max-width: 600px) {
     body {
         place-content: start;
-        padding: 84px 20px 32px;
+        /* 61vw = altura da imagem (proporção ~580x353) */
+        padding: calc(61vw + 32px) 20px 32px;
+        background-color: #0b1227;
+        background-image:
+            linear-gradient(rgba(11, 18, 39, 0.15), #0b1227),
+            linear-gradient(rgba(47, 102, 161, 0.12) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(47, 102, 161, 0.12) 1px, transparent 1px),
+            url("felix_gostoso.jpg");
+        background-size: 100% 61vw, 32px 32px, 32px 32px, 100% auto;
+        background-position: top, 0 0, 0 0, top center;
+        background-repeat: no-repeat, repeat, repeat, no-repeat;
+        background-attachment: scroll;
     }
 
     h1 {
